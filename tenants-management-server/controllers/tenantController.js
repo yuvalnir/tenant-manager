@@ -41,9 +41,8 @@ const updateTenant = async (req, res) => {
 const deleteTenant = async (req, res) => {
     try {
         const tenant = await Tenant.findOneAndDelete({ _id: req.params.id });
-        console.log("Found tenant", tenant);
+        console.log("Deleted tenant", tenant);
         return res.status(200).json(tenant);
-
     }
     catch (exception) {
         console.error(exception);

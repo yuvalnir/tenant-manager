@@ -3,9 +3,9 @@ const Schema = mongoose.Schema;
 
 const tenantSchema = new Schema({ 
     tenantmanager: { type: Schema.Types.ObjectId, ref: 'User' },
-    name: 'string',
-    phonenumber: 'string',
-    address: 'string', 
+    name: String,
+    phonenumber: String,
+    address: String, 
     debt: Number });
 
 module.exports = mongoose.model('Tenant', tenantSchema)

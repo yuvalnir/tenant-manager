@@ -1,3 +1,3 @@
-config.properties
 **/node_modules
 tenants-management-server/config.properties.js
+tenants-management-server/app.log
