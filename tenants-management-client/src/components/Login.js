@@ -22,7 +22,6 @@ class Login extends Component {
                 password: data.get('password')
             })
         }).then(response => {
-            console.log(response.status); //delete later
             if (response.status === 200) {
                 response.json().then(jsonObj => {   
                     localStorage.setItem('userId', jsonObj.data.user._id);
@@ -32,7 +31,7 @@ class Login extends Component {
                     this.props.setIsLogedin(true);    
                 });
             } else
-                alert("Email or password was entered incorrectly, db error");
+                alert("Email or password was entered incorrectly");
         });
     }
 
